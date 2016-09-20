@@ -1,0 +1,64 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black">
+<meta name = "viewport" content = "initial-scale = 1, user-scalable = no">
+<link rel="apple-touch-icon" href="images/touch-icon-iphone.png">
+<link rel="apple-touch-icon" sizes="76x76" href="images/touch-icon-ipad.png">
+<link rel="apple-touch-icon" sizes="120x120" href="images/touch-icon-iphone-retina.png">
+<link rel="apple-touch-icon" sizes="152x152" href="images/touch-icon-ipad-retina.png">
+<link rel="stylesheet" type="text/css" href="style/style.css"/>
+<script type="text/javascript" src="http://www.google.com/jsapi"></script>
+<script type="text/javascript" src="js/jquery_min.js"></script>
+<title>City Eyes</title>
+</head>
+
+<body style="background:linear-gradient(to bottom, #eae0cb 0%,#6fa9b0 100%);">
+<!-- FORM -->
+<div id="wrapper">
+<form action="post.php" method="POST" enctype="multipart/form-data" onsubmit="return showMapView();">
+	<div id="welcome_view">
+        <img src="images/logo.png" id="logo" />   
+    </div>
+	<div id="map_view"></div>
+    <div id="image_view"></div>
+    <div id="my_posts_view"></div>
+    <div id="post_view">
+    	<div id="my_photo">
+            <img src="#" id="uploaded_photo" />
+        </div>
+        <div id="form_wrapper">    
+            <div id="address">
+            	<input type="text" id="address_field" />
+                <div id="check_address" onClick="relocalize()"></div>
+            </div>
+            <div id="at_profilles">
+            	<p id="at_profilles_field">SubPrefeitura, Teste, Jun_Okida</p>
+            </div>
+            <div id="tweet">
+            	<p id="char_remaining"></p>
+            	<textarea type="text" name="status" rows="5" cols="60" id="status" onKeyUp="caracterCount()"></textarea>
+            </div>
+            <input type="image" src="images/postar.png" value="Submit" id="post_button" />
+            <input type="hidden" name="lat" id="lat" />
+            <input type="hidden" name="lon" id="lon" />
+        </div>
+    </div>
+	<div id="menu">
+    	<div id="menu_wrapper">
+            <div id="image_view_button"></div>
+            <div id="map_view_button"></div>
+            <input type="file" name="photo" id="photo" capture="camera" onchange="showPostView(event);" ontouchstart="photoTouch()"/>
+            <div id="logout"></div>
+            <div id="my_posts">
+                <img src="images/my_posts_tb.png" id="my_posts_shadow" />
+            </div>
+        </div>
+    </div>
+</form>
+</div>
+<script type="text/javascript" src="js/main.js"></script>
+</body>
+</html>
