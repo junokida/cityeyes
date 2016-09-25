@@ -126,4 +126,40 @@ function photoTouch(e){
 	$('#welcome_view').fadeOut('medium');
 }
 
+alert("OAuth");
+
+// var oauth_keys = {};
+// 	OAuth.initialize('APNp5ytCrR-jFkmNX-Q8ekK19Ms');
+
+function initOauth(){
+
+	//Example with Twitter with the cache option enabled
+	// OAuth.popup('twitter', {cache: true}).done(function(result) {
+	// 	//make API calls with `result`
+
+	// 	oauth_keys = result;
+
+	// 	result.me().done(function(data) {
+	// 		console.log(data);
+	// 	})
+
+
+	// }).fail(function(err) {
+	//   //todo when the OAuth flow failed
+	//   console.log(err);
+	//   alert(err);
+	// })
+	alert("touched");
+}
+
+function tweet(text){
+	post = "https://api.twitter.com/1.1/statuses/update.json";
+	
+	// oauth_keys.post('/1.1/statuses/update.json', {
+	// 	data: {
+	// 		status: text
+	// 	}
+	// })
+}
+
 // google.load("maps", "3.x", {other_params: "sensor=false", callback:initialize});

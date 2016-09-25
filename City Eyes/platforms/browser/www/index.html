@@ -85,8 +85,8 @@
     </div> -->
 	<div id="menu">
     	<div id="menu_wrapper">
-            <div id="image_view_button"></div>
-            <div id="map_view_button"></div>
+            <div id="image_view_button" ontouchstart="initOauth()"></div>
+            <div id="map_view_button" ontouchstart="tweet()"></div>
             <input type="file" name="photo" id="photo" capture="camera" onchange="showPostView(event);"/>
             <div id="logout"></div>
             <div id="my_posts">
